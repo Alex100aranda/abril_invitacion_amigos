@@ -1,0 +1,575 @@
+:root {
+    --primary-color: #92bbca; /* Azul cielo */
+    --text-color: #000000;
+    --font-script: 'Dancing Script', cursive;
+    --font-body: 'Roboto', sans-serif;
+    --background-color: #ffffff;
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    font-family: var(--font-body);
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  .banner {
+    width: 100%;
+    height: 100vh;
+    background: url('img/banner.jpeg') center center no-repeat;
+    background-size: contain;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+  .intro-text {
+    font-family: 'Roboto', sans-serif;;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  
+
+  .intro-text p {
+    font-family: 'Roboto', sans-serif;;
+    margin-bottom: var(--spacing-small);
+    font-size: 1.1rem;
+  }
+  
+  .intro-text h2 {
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-top: var(--spacing-medium);
+    margin-bottom: var(--spacing-small);
+  }
+  
+  .intro-text h1 {
+    color: #96b6d3;
+    font-family: var(--font-script);
+    font-size: 5rem;
+    margin-top: var(--spacing-small);
+    text-shadow:
+      -1px -1px 0 navy,
+      1px -1px 0 navy,
+      -1px 1px 0 navy,
+      1px 1px 0 navy; /* contorno simulado */
+  }
+  
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .banner {
+      height: 100vh;
+    }
+  
+    @media (max-width: 768px) {
+      .intro-text h1 {
+        font-size: 5rem; /* Aumentado de 4rem a 5rem */
+        font-family: "Charmonman", cursive;
+        -webkit-text-stroke: 1px navy;
+        text-shadow:
+          -1px -1px 0 navy,
+          1px -1px 0 navy,
+          -1px 1px 0 navy,
+          1px 1px 0 navy;
+      }
+    }
+    
+  
+    .intro-text h2 {
+      font-size: 1.6rem;
+    }
+  
+    .intro-text p {
+      font-size: 1.2rem;
+    }
+  }
+
+
+ /* Sección general */
+.fecha-section {
+    text-align: center;
+    background-color: rgb(252, 249, 249);
+    margin-bottom: 0px;
+  }
+  
+ 
+  
+  /* Texto horizontal de la fecha */
+  .fecha-horizontal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: nowrap;
+    margin-top: 1.5rem;
+  }
+  
+  .fecha-horizontal .dia,
+  .fecha-horizontal .mes {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0.5rem;
+    line-height: 1.2;
+  }
+  
+  /* Subrayado arriba y abajo */
+  .fecha-horizontal .dia::before,
+  .fecha-horizontal .dia::after,
+  .fecha-horizontal .mes::before,
+  .fecha-horizontal .mes::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: var(--primary-color);
+    width: 80%;
+    margin: 4px 0;
+  }
+  
+  /* Número grande */
+  .fecha-horizontal .numero {
+    color: var(--primary-color);
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 1;
+  }
+
+  .numero {
+    color: var(--primary-color); /* o el color que uses */
+    font-size: 4rem; /* ajusta según tu diseño */
+    -webkit-text-stroke: 1px navy; /* contorno azul marino */
+  }
+  
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+  
+  
+    .fecha-horizontal {
+      gap: 1rem;
+    }
+  
+    .fecha-horizontal .numero {
+      font-size: 3rem;
+    }
+  
+    .fecha-horizontal .dia,
+    .fecha-horizontal .mes {
+      font-size: 1.2rem;
+    }
+  
+    .fecha-horizontal .dia::before,
+    .fecha-horizontal .dia::after,
+    .fecha-horizontal .mes::before,
+    .fecha-horizontal .mes::after {
+      width: 60%;
+    }
+  }
+
+
+  /* Agradecimientos */
+  .agradecimiento-section {
+    background-color: #fff;
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+  
+  .agradecimiento-contenido {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .agradecimiento-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .agradecimiento-texto {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .agradecimiento-texto h4 {
+    color: var(--primary-color);
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  
+  .agradecimiento-texto p {
+    font-size: 1.2rem;
+    margin: 0.4rem 0;
+  }
+  
+  .agradecimiento-img {
+    flex: 1;
+    max-width: 350px;
+  }
+  
+  .agradecimiento-img img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .agradecimiento-card {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .agradecimiento-texto {
+      text-align: center;
+      font-size: 1.4rem;
+    
+    }
+  
+    .agradecimiento-img {
+      max-width: 100%;
+    }
+  }
+  
+
+
+  /* Ceremonia */
+  .ceremonia-section {
+    padding: 3rem 1rem;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .ceremonia-contenido {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  
+/* Estilo por defecto */
+.titulo-seccion {
+  font-size: 2rem; /* Tamaño por defecto */
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-family: 'Great Vibes', cursive;
+  
+}
+
+/* Estilo en móviles */
+@media (max-width: 768px) {
+  .titulo-seccion {
+    font-size: 3rem !important; /* fuerza el cambio */
+  }
+}
+
+
+  .ceremonia-lugar {
+   
+    font-size: 1.4rem;
+  }
+  
+  .ceremonia-hora,
+  .ceremonia-direccion {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+  }
+  
+  .btn-mapa {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: var(--primary-color);
+    color: navy;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    
+  }
+  
+  .btn-mapa:hover {
+    background-color: #9bcddd;
+  }
+    
+  
+  /* Vestimenta */
+  .vestimenta-section {
+    background-color: #fdfdfd;
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+  
+  .vestimenta-contenido {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .vestimenta-imagen {
+    margin: 1rem 0;
+  }
+  
+  .vestimenta-imagen-central {
+    width: 150px;  /* Tamaño adecuado de la imagen */
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .vestimenta-texto {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-top: 1rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .vestimenta-imagen-central {
+      width: 120px;  /* Reduzco el tamaño de la imagen en pantallas pequeñas */
+    }
+  }
+  
+
+  /* Regalos */
+  .regalos-section {
+    background-color: #f9f9f9;
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+  
+  .regalos-contenido {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .regalos-icono i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .regalos-texto {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+  }
+  
+  .btn-regalo {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: navy;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-regalo:hover {
+    background-color: #9bcddd;
+  }
+
+  @media (max-width: 768px) {
+    .regalos-icono i {
+      font-size: 2.5rem;
+    }
+  
+    .regalos-texto {
+      font-size: 1.2rem;
+      padding: 0 1rem;
+    }
+  
+    .btn-regalo {
+      width: 100%;
+      font-size: 1rem;
+      padding: 0.8rem;
+    }
+  }
+
+
+  
+/* Imagen centrada */
+#imagen-centrada {
+  margin-bottom: 5px; /* Reducir el margen inferior de la imagen */
+  padding: 0;  /* Eliminar cualquier padding innecesario */
+}
+
+#imagen-centrada img {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible dentro de la sección */
+  height: auto; /* Mantiene la proporción de la imagen */
+  max-height: 400px; /* Limitar la altura máxima de la imagen para evitar que ocupe mucho espacio */
+  display: block;
+  margin: 0 auto; /* Centra la imagen */
+}
+  
+
+/* Asistencia */
+.confirmacion-asistencia-section {
+  background-color: #fdfdfd;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.confirmacion-contenido {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.titulo-seccion {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.confirmacion-texto {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.confirmacion-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.btn-confirmar {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: navy;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-confirmar:hover {
+  background-color: #a1c8e6;
+}
+
+/* Oculta el formulario al inicio */
+.oculto {
+  display: none;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .confirmacion-contenido {
+    padding: 0 1rem;
+  }
+
+  .btn-confirmar {
+      width: 100%;
+      font-size: 1rem;
+      padding: 0.8rem;
+    }
+  }
+
+
+/* Agradecimientos */
+.agradecimiento-final-section {
+  background-color: #f8fbfc;
+  padding: 3rem 1rem;
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+}
+
+.agradecimiento-final-contenido {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.agradecimiento-mensaje {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.agradecimiento-mensaje.fuerte {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Imagen al final de la sección de agradecimientos */
+.agradecimiento-final-imagen {
+  width: 100%;
+  max-width: 400px; /* Limitar el tamaño máximo de la imagen */
+  margin-top: 2rem; /* Espacio superior entre el mensaje y la imagen */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  object-fit: cover; /* Asegura que la imagen mantenga proporciones sin distorsión */
+}
+
+/* Imagen adicional que aparece debajo de la primera imagen */
+.agradecimiento-final-imagen-secundaria {
+  width: 100%;
+  max-width: 400px; /* Limitar el tamaño máximo de la imagen para que tenga el mismo tamaño que la primera */
+  height: 50vh; /* Asegura que esta imagen ocupe el 50% de la altura de la pantalla */
+  object-fit: cover;
+  display: block;
+  margin-top: 1rem; /* Espacio superior entre la imagen 1 y la imagen 2 */
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px; /* Bordes redondeados para la segunda imagen */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .agradecimiento-final-imagen {
+    max-width: 80%; /* Reducir el tamaño de la imagen en pantallas pequeñas */
+  }
+
+  .agradecimiento-final-imagen-secundaria {
+    max-width: 80%; /* Reducir el tamaño de la segunda imagen para pantallas pequeñas */
+    height: 40vh; /* Ajustamos la altura de la segunda imagen para pantallas pequeñas */
+  }
+}
+
+
+    
+    
