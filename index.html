@@ -167,28 +167,6 @@
   </div>
 </section>
 
-
-<!-- Sección Mesa de Regalos -->
-<section class="regalos-section" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
-  <div class="container regalos-contenido">
-    <h2 class="titulo-seccion">Mesa de Regalos</h2>
-    <div class="regalos-icono">
-      <i class="fas fa-gift"></i>
-    </div>
-    <p class="regalos-texto">
-      Tu presencia es lo más importante para mí, pero si deseas tener algún detalle, aquí encontrarás mi mesa de regalos:
-    </p>
-    <p class="regalos-texto">
-      No. de evento: <strong>51680214</strong>
-    </p>
-    
-    <a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51680214" target="_blank" class="btn-regalo">
-      Ver Link de Liverpool
-    </a>
-  </div>
-</section>
-
-
 <!-- Sección Confirmar Asistencia -->
 <section class="confirmacion-asistencia-section" data-aos="fade-up">
   <div class="container confirmacion-contenido">
@@ -227,6 +205,50 @@
 </section>
 
 
+<!-- Sección Mesa de Regalos -->
+<section class="regalos-section" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+  <div class="container regalos-contenido">
+    <h2 class="titulo-seccion">Mesa de Regalos</h2>
+    <div class="regalos-icono">
+      <i class="fas fa-gift"></i>
+    </div>
+    <p class="regalos-texto">
+      Tu presencia es lo más importante para mí, pero si deseas tener algún detalle, aquí encontrarás mi mesa de regalos:
+    </p>
+    <p class="regalos-texto">
+      No. de evento: <strong>51680214</strong>
+    </p>
+    
+    <a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51680214" target="_blank" class="btn-regalo">
+      Ver Link de Liverpool
+    </a>
+  </div>
+</section>
+
+<!-- Sección de cuenta regresiva -->
+<section class="countdown-section" data-aos="fade-up">
+  <h2 class="countdown-title">Faltan</h2>
+  <div class="countdown-container">
+    <div class="countdown-box">
+      <span id="days" class="countdown-number">00</span>
+      <span class="countdown-label">Días</span>
+    </div>
+    <div class="countdown-box">
+      <span id="hours" class="countdown-number">00</span>
+      <span class="countdown-label">Horas</span>
+    </div>
+    <div class="countdown-box">
+      <span id="minutes" class="countdown-number">00</span>
+      <span class="countdown-label">Minutos</span>
+    </div>
+    <div class="countdown-box">
+      <span id="seconds" class="countdown-number">00</span>
+      <span class="countdown-label">Segundos</span>
+    </div>
+  </div>
+</section>
+
+
 <!-- Sección de Agradecimiento Final -->
 <section class="agradecimiento-final-section" data-aos="fade-down">
   <div class="container agradecimiento-final-contenido">
@@ -239,6 +261,33 @@
   <!-- Imagen 1: Abarca toda la pantalla -->
   <img src="img/zapatilla.jpg" alt="Imagen de Agradecimiento 1" class="agradecimiento-final-imagen">
 </section>
+
+
+ <!-- Contador -->
+<script>
+  const countdown = () => {
+    const eventDate = new Date("July 5, 2025 00:00:00").getTime();
+    const now = new Date().getTime();
+    const timeLeft = eventDate - now;
+
+    if (timeLeft > 0) {
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+      document.getElementById("days").textContent = String(days).padStart(2, '0');
+      document.getElementById("hours").textContent = String(hours).padStart(2, '0');
+      document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
+      document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
+    }
+  };
+
+  countdown();
+  setInterval(countdown, 1000);
+</script>
+
+
 
 <script>
   // Mostrar el formulario al hacer clic en el botón

@@ -571,5 +571,89 @@
 }
 
 
+/* Faltan */
+.countdown-section {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #f8f9fa;
+}
+
+.countdown-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.countdown-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-number {
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: var(--font-body);
+  color: var(--primary-color);
+  background-color: #ffffff;
+  padding: 1rem 1.5rem;
+  border: 3px solid #b3d6e4; /* azul cielo más claro */
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(146, 187, 202, 0.3); /* sombra suave azul celeste */
+  -webkit-text-stroke: 1px navy;
+  transition: transform 0.3s ease;
+}
+
+.countdown-number:hover {
+  transform: scale(1.05);
+}
+
+.countdown-label {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  font-family: var(--font-body);
+  color: var(--text-color);
+  letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .countdown-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+  }
+
+  .countdown-container {
+    gap: 0.5rem;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+
+  .countdown-box {
+    flex: 1;
+    min-width: 60px; /* asegura que quepan bien */
+  }
+
+  .countdown-number {
+    font-size: 2rem;
+    padding: 0.5rem 0.7rem;
+    border-radius: 12px;
+  }
+
+  .countdown-label {
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+  }
+}
+
+
     
     
