@@ -310,7 +310,7 @@
   
   /* Vestimenta */
   .vestimenta-section {
-    background-color: #ffffff;
+    background-color: #f9f9f9;
     padding: 3rem 1rem;
     text-align: center;
   }
@@ -510,7 +510,7 @@
 
 /* Agradecimientos */
 .agradecimiento-final-section {
-  background-color: #f8fbfc;
+  background-color: #f9f9f9;
   padding: 3rem 1rem;
   text-align: center;
   border-top: 1px solid #e0e0e0;
